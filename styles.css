@@ -1,0 +1,348 @@
+/* Tri-Valley Readers — Book Club Website */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #1a1614;
+  --paper: #f5f0e8;
+  --cream: #e8e0d4;
+  --accent: #6b4423;
+  --accent-light: #8b6342;
+  --muted: #5c5349;
+  --border: #d4c9bc;
+  --shadow: rgba(26, 22, 20, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & nav */
+.site-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.site-header .wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-tabs a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-tabs a:hover,
+.nav-tabs a.active {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  width: 100%;
+}
+
+main .wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 2rem 0 1rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.35rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--ink);
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+/* Hero on home */
+.hero {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.hero .tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+}
+
+/* Cards / sections */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Reading list */
+.reading-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.reading-tabs button {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.reading-tabs button:hover {
+  color: var(--accent);
+}
+
+.reading-tabs button.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.reading-panel {
+  display: none;
+}
+
+.reading-panel.active {
+  display: block;
+}
+
+.book-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+.book-cover {
+  width: 80px;
+  min-width: 80px;
+  height: 120px;
+  background: var(--cream);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.book-info h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem;
+  color: var(--ink);
+}
+
+.book-info .author {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-info .date,
+.book-info .notes {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Membership */
+.membership-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.membership-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.membership-list li:last-child {
+  border-bottom: none;
+}
+
+.membership-list .icon {
+  color: var(--accent);
+  font-size: 1.25rem;
+  min-width: 1.5rem;
+}
+
+.contact-box {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--border);
+}
+
+.contact-box h3 {
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-light);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--cream);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer .wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-tabs {
+    width: 100%;
+  }
+
+  .nav-tabs a {
+    flex: 1;
+    text-align: center;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .reading-tabs {
+    flex-wrap: wrap;
+  }
+
+  .book-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

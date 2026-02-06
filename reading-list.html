@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading List — Tri-Valley Readers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="logo"><a href="index.html">Tri-Valley Readers</a></div>
+      <nav>
+        <ul class="nav-tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reading-list.html" class="active">Reading List</a></li>
+          <li><a href="membership.html">Membership</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Reading List</h1>
+      <p class="lead">Our current pick and books we've read together in the past.</p>
+
+      <div class="reading-tabs" role="tablist">
+        <button type="button" class="active" role="tab" aria-selected="true" data-panel="current">Currently Reading</button>
+        <button type="button" role="tab" aria-selected="false" data-panel="past">Past Reads</button>
+      </div>
+
+      <div id="current" class="reading-panel active" role="tabpanel">
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4>Example: The Midnight Library</h4>
+            <p class="author">Matt Haig</p>
+            <p class="date">Discussion: March 2025</p>
+            <p class="notes">A novel about regret, possibility, and the many lives we might have lived. Our current club pick — join us for the discussion!</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); font-size: 0.95rem;">Add your current book here. Update the title, author, date, and notes as needed.</p>
+      </div>
+
+      <div id="past" class="reading-panel" role="tabpanel" hidden>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4>Demon Copperhead</h4>
+            <p class="author">Barbara Kingsolver</p>
+            <p class="date">February 2025</p>
+            <p class="notes">A modern retelling of David Copperfield set in Appalachia. Sparked a great discussion on family, resilience, and place.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4>Tomorrow, and Tomorrow, and Tomorrow</h4>
+            <p class="author">Gabrielle Zevin</p>
+            <p class="date">January 2025</p>
+            <p class="notes">A story of friendship and creativity through the lens of game design. Club favorite for character and pacing.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4>Remarkably Bright Creatures</h4>
+            <p class="author">Shelby Van Pelt</p>
+            <p class="date">December 2024</p>
+            <p class="notes">Heartwarming novel with an unlikely narrator — an octopus. Perfect for the holidays and a crowd-pleaser.</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); font-size: 0.95rem;">Add or edit past reads above. You can replace these examples with your club's actual history.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Tri-Valley Readers · Est. in the Tri-Valley</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.reading-tabs button').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var panelId = this.getAttribute('data-panel');
+        document.querySelectorAll('.reading-tabs button').forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.reading-panel').forEach(function(panel) {
+          panel.classList.remove('active');
+          panel.hidden = true;
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+        document.getElementById(panelId).classList.add('active');
+        document.getElementById(panelId).hidden = false;
+      });
+    });
+  </script>
+</body>
+</html>
