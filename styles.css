@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 :root {
-  --ink: #1a1614;
-  --paper: #f5f0e8;
-  --cream: #e8e0d4;
-  --accent: #6b4423;
-  --accent-light: #8b6342;
-  --muted: #5c5349;
-  --border: #d4c9bc;
-  --shadow: rgba(26, 22, 20, 0.08);
+  --ink: #3d081e;
+  --paper: #f8f2f4;
+  --cream: #f7ebf0;
+  --accent: #821b46;
+  --accent-light: #ab3063;
+  --muted: #7e3c58;
+  --border: #ede1e6;
+  --shadow: rgba(99, 67, 80, 0.5);
 }
 
 * {
@@ -243,6 +243,15 @@ p {
   color: var(--ink);
 }
 
+.book-info h4 a {
+  color: inherit;
+}
+
+.book-info h4 a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .book-info .author {
   color: var(--accent);
   font-size: 0.95rem;
@@ -290,6 +299,21 @@ p {
 
 .contact-box h3 {
   margin-top: 0;
+}
+
+.membership-form-wrap {
+  margin-top: 2rem;
+}
+
+.membership-form-wrap h3 {
+  margin: 0 0 1rem;
+}
+
+.membership-form-wrap iframe {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-height: 800px;
 }
 
 a {

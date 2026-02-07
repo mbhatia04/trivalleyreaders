@@ -23,24 +23,24 @@
   <main>
     <div class="wrap">
       <h1>Reading List</h1>
-      <p class="lead">Our current pick and books we've read together in the past.</p>
+      <p class="lead">Take a look at what we're reading this month, what we've read in the past, and what we want to read next!</p>
 
       <div class="reading-tabs" role="tablist">
         <button type="button" class="active" role="tab" aria-selected="true" data-panel="current">Currently Reading</button>
         <button type="button" role="tab" aria-selected="false" data-panel="past">Past Reads</button>
+        <button type="button" role="tab" aria-selected="false" data-panel="wishlist">Books We Want to Read</button>
       </div>
 
       <div id="current" class="reading-panel active" role="tabpanel">
         <div class="book-item">
           <div class="book-cover">Cover</div>
           <div class="book-info">
-            <h4>Example: The Midnight Library</h4>
+            <h4>The Midnight Library</h4>
             <p class="author">Matt Haig</p>
             <p class="date">Discussion: March 2025</p>
             <p class="notes">A novel about regret, possibility, and the many lives we might have lived. Our current club pick — join us for the discussion!</p>
           </div>
         </div>
-        <p style="color: var(--muted); font-size: 0.95rem;">Add your current book here. Update the title, author, date, and notes as needed.</p>
       </div>
 
       <div id="past" class="reading-panel" role="tabpanel" hidden>
@@ -71,13 +71,87 @@
             <p class="notes">Heartwarming novel with an unlikely narrator — an octopus. Perfect for the holidays and a crowd-pleaser.</p>
           </div>
         </div>
-        <p style="color: var(--muted); font-size: 0.95rem;">Add or edit past reads above. You can replace these examples with your club's actual history.</p>
+      </div>
+
+      <div id="wishlist" class="reading-panel" role="tabpanel" hidden>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/32929156-wuthering-heights" target="_blank" rel="noopener noreferrer">Wuthering Heights</a></h4>
+            <p class="author">Emily Brontë</p>
+            <p class="notes">A dark, passionate tale of obsession and revenge on the Yorkshire moors, centered on the fierce bond between Heathcliff and Catherine Earnshaw and the damage it wreaks across two generations.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/17601.The_Will_to_Change" target="_blank" rel="noopener noreferrer">The Will to Change</a></h4>
+            <p class="author">Bell Hooks</p>
+            <p class="notes">Hooks examines how patriarchy harms men and argues that loving masculinity is possible only when men are willing to feel, connect, and reject domination. A compassionate call for men to embrace emotional honesty and change.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/6149.Beloved" target="_blank" rel="noopener noreferrer">Beloved</a></h4>
+            <p class="author">Toni Morrison</p>
+            <p class="notes">Set after the Civil War, a formerly enslaved woman is haunted by the ghost of the baby she killed to spare her from slavery. Morrison weaves memory, trauma, and love into a profound meditation on freedom and the cost of survival.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/34454589-the-handmaid-s-tale" target="_blank" rel="noopener noreferrer">The Handmaid's Tale</a></h4>
+            <p class="author">Margaret Atwood</p>
+            <p class="notes">In the theocratic Republic of Gilead, fertile women are forced into reproductive servitude. Offred navigates surveillance, power, and resistance in a dystopia that feels chillingly close to possible.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/240139608-tender-is-the-flesh" target="_blank" rel="noopener noreferrer">Tender is the Flesh</a></h4>
+            <p class="author">Agustina Bazterrica</p>
+            <p class="notes">After a virus makes animal flesh poisonous, society turns to breeding humans for consumption. A slaughterhouse worker’s moral numbness is tested in this brutal, satirical take on commodification and complicity.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/14942.Mrs_Dalloway" target="_blank" rel="noopener noreferrer">Mrs. Dalloway</a></h4>
+            <p class="author">Virginia Woolf</p>
+            <p class="notes">A single day in post–World War I London, following Clarissa Dalloway as she prepares a party and weaves through the city. Woolf’s stream of consciousness captures inner lives, memory, and the weight of the past.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/10210.Jane_Eyre" target="_blank" rel="noopener noreferrer">Jane Eyre</a></h4>
+            <p class="author">Charlotte Brontë</p>
+            <p class="notes">An orphan grows into a principled governess and falls in love with the brooding Mr. Rochester—until his secret threatens everything. A classic of moral courage, equality, and the search for belonging.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/32620332-the-seven-husbands-of-evelyn-hugo" target="_blank" rel="noopener noreferrer">The 7 Husbands of Evelyn Hugo</a></h4>
+            <p class="author">Taylor Jenkins Reid</p>
+            <p class="notes">A reclusive Hollywood legend finally tells her life story to an unknown journalist: seven marriages, ambition, and the one love she had to hide. Glamorous, twisty, and deeply emotional.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover">Cover</div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/60811826-i-who-have-never-known-men" target="_blank" rel="noopener noreferrer">I Who Have Never Known Men</a></h4>
+            <p class="author">Jacqueline Harpman</p>
+            <p class="notes">A woman has spent her whole life underground with a group of captive women and their guards. When they are freed into a barren world, she must make sense of existence, memory, and connection in a haunting fable.</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">Tri-Valley Readers · Est. in the Tri-Valley</div>
+    <div class="wrap">Tri-Valley Readers · Est. 2026 · San Ramon, CA</div>
   </footer>
 
   <script>
