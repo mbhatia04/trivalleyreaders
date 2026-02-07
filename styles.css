@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
   line-height: 1.6;
   color: var(--ink);
@@ -198,7 +198,7 @@ p {
 }
 
 .reading-tabs button {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -322,6 +322,25 @@ p {
   color: var(--accent);
   font-size: 1.25rem;
   min-width: 1.5rem;
+}
+
+.membership-list .membership-content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  width: 100%;
+}
+
+.membership-list .membership-content strong {
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.membership-list .membership-content .description {
+  color: var(--muted);
 }
 
 .contact-box {
