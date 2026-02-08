@@ -236,6 +236,92 @@ p {
   font-size: 1.1rem;
 }
 
+.featured-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0 0.5rem 0;
+  gap: 2rem;
+}
+
+.featured-book-cover {
+  width: 200px;
+  height: auto;
+}
+
+.featured-book-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.featured-book-info {
+  max-width: 600px;
+}
+
+.featured-date {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.featured-book-info h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.featured-book-info h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.featured-book-info h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.featured-book-info .author {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.featured-book-info .description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.meeting-notice {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--cream);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.meeting-notice p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.meeting-notice a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.meeting-notice a:hover {
+  text-decoration: underline;
+  color: var(--accent-light);
+}
+
 .book-item {
   display: flex;
   gap: 1.5rem;
