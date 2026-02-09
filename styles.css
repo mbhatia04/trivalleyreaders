@@ -239,15 +239,29 @@ p {
 .featured-book {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   padding: 2rem 0 0.5rem 0;
+  gap: 1.5rem;
+}
+
+.featured-date {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-align: left;
+}
+
+.featured-book-content {
+  display: flex;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .featured-book-cover {
-  width: 200px;
-  height: auto;
+  width: 220px;
+  flex-shrink: 0;
 }
 
 .featured-book-cover img {
@@ -258,21 +272,13 @@ p {
 }
 
 .featured-book-info {
-  max-width: 600px;
-}
-
-.featured-date {
-  font-size: 0.9rem;
-  color: var(--accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  flex: 1;
+  text-align: left;
 }
 
 .featured-book-info h3 {
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .featured-book-info h3 a {
@@ -288,13 +294,45 @@ p {
 .featured-book-info .author {
   font-size: 1.1rem;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .featured-book-info .description {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.download-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-label {
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 500;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: var(--accent);
+  color: var(--paper);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background: var(--accent-light);
+  text-decoration: none;
 }
 
 .meeting-notice {
