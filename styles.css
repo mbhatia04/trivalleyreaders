@@ -332,6 +332,7 @@ p {
 
 .download-btn:hover {
   background: var(--accent-light);
+  color: var(--paper);
   text-decoration: none;
 }
 
@@ -347,6 +348,7 @@ p {
   margin: 0;
   font-size: 0.95rem;
   color: var(--ink);
+  text-align: center;
 }
 
 .meeting-notice a {
