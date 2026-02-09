@@ -550,6 +550,10 @@ a:hover {
     gap: 1rem;
   }
 
+  .featured-date {
+    text-align: center;
+  }
+
   .featured-book-content {
     flex-direction: column;
     align-items: center;
