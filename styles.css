@@ -101,14 +101,14 @@ body {
 /* Main content */
 main {
   flex: 1;
-  max-width: 960px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 3rem;
   width: 100%;
 }
 
 main .wrap {
-  max-width: 720px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -119,13 +119,13 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0 0 1rem;
   color: var(--ink);
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 2rem 0 1rem;
   color: var(--accent);
   border-bottom: 2px solid var(--border);
@@ -133,7 +133,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   margin: 1.5rem 0 0.5rem;
   color: var(--ink);
 }
@@ -141,11 +141,14 @@ h3 {
 p {
   margin: 0 0 1rem;
   color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: var(--ink);
+  line-height: 1.6;
 }
 
 /* Hero on home */
@@ -199,7 +202,7 @@ p {
 
 .reading-tabs button {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -233,7 +236,7 @@ p {
   padding: 3rem 2rem;
   color: var(--muted);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .featured-book {
@@ -244,7 +247,7 @@ p {
 }
 
 .featured-date {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--accent);
   font-weight: 600;
   text-transform: uppercase;
@@ -292,13 +295,13 @@ p {
 }
 
 .featured-book-info .author {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--accent);
   margin: 0 0 1rem 0;
 }
 
 .featured-book-info .description {
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: var(--muted);
   margin-bottom: 1.5rem;
@@ -462,7 +465,7 @@ p {
   color: var(--ink);
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .membership-list .membership-content .description {
@@ -490,6 +493,7 @@ p {
 }
 
 .membership-form-wrap iframe {
+  background: var(--cream);
   display: block;
   border: 1px solid var(--border);
   border-radius: 8px;
