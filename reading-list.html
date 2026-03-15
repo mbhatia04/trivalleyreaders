@@ -33,30 +33,25 @@
 
       <div id="current" class="reading-panel active" role="tabpanel">
         <div class="featured-book">
-          <p class="featured-date">February 2026</p>
-          <div class="featured-book-content">
-            <div class="featured-book-cover">
-              <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388208495i/11337.jpg" alt="The Bluest Eye cover">
-            </div>
-            <div class="featured-book-info">
-              <h3><a href="https://www.goodreads.com/book/show/11337.The_Bluest_Eye" target="_blank" rel="noopener noreferrer">The Bluest Eye</a></h3>
-              <p class="author">Toni Morrison</p>
-              <p class="description">Set in 1941 Ohio, this powerful debut novel tells the story of Pecola Breedlove, a young Black girl who longs for blue eyes, believing they will make her beautiful and loved. Morrison's haunting exploration of beauty, race, and belonging reveals the devastating effects of internalized racism on a child's sense of self-worth.</p>
-              <div class="download-links">
-                <p class="download-label">Want to read online?</p>
-                <a href="https://vdoc.pub/documents/the-bluest-eye-r9hd2lqnf5o0" target="_blank" rel="noopener noreferrer" class="download-btn">EPUB</a>
-                <a href="https://www.blacktribe.org/uploads/1/8/6/5/18653164/toni_morrison_-_the_bluest_eye__.pdf" target="_blank" rel="noopener noreferrer" class="download-btn">PDF</a>
-              </div>
-            </div>
-          </div>
-          <div class="meeting-notice">
-            <p>Want to join the discussion? For meeting details, head over to our <a href="membership.html">membership page</a> and fill out the form!</p>
+          <p class="featured-date">March 2026</p>
+          <div class="tbd-notice">
+            <p>Our next book will be announced soon! Check back after our March meeting, or join our <a href="membership.html">membership</a> to vote on upcoming selections.</p>
           </div>
         </div>
       </div>
 
       <div id="past" class="reading-panel" role="tabpanel" hidden>
-        <p class="empty-notice">Nothing to see here, yet!</p>
+        <div class="past-book-item">
+          <p class="read-date">February 2026</p>
+          <div class="book-cover"><img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388208495i/11337.jpg" alt="The Bluest Eye cover"></div>
+          <div class="book-info">
+            <h4><a href="https://www.goodreads.com/book/show/11337.The_Bluest_Eye" target="_blank" rel="noopener noreferrer">The Bluest Eye</a></h4>
+            <p class="author">Toni Morrison</p>
+            <p class="club-review">
+              Although it was a difficult and often heartbreaking read, our club found <em>The Bluest Eye</em> to be a moving and raw look at how internalized racism and family trauma can shape a person's life.<span class="review-extra" hidden> This novel sparked deep discussions about how our upbringing affects the way we move through the world, as well as the specific struggles of being both a woman and a person of color. We were especially struck by Morrison's ability to write from so many different perspectives, which helped us truly understand the experiences of every character. Overall, we highly recommend this book and look forward to catching more of its deeper meanings on a future re-read.</span> <button type="button" class="review-toggle" aria-expanded="false">Read more</button>
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="wishlist" class="reading-panel" role="tabpanel" hidden>
@@ -156,6 +151,20 @@
         this.setAttribute('aria-selected', 'true');
         document.getElementById(panelId).classList.add('active');
         document.getElementById(panelId).hidden = false;
+      });
+    });
+
+    // Inline review expand/collapse
+    document.querySelectorAll('.review-toggle').forEach(function(toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        var review = this.closest('.club-review');
+        var extra = review ? review.querySelector('.review-extra') : null;
+        if (!extra) return;
+
+        var isExpanded = this.getAttribute('aria-expanded') === 'true';
+        extra.hidden = isExpanded;
+        this.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+        this.textContent = isExpanded ? 'Read more' : 'Collapse';
       });
     });
   </script>
