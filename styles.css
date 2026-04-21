@@ -568,6 +568,10 @@ p {
   margin-top: 0;
 }
 
+.contact-box p {
+  margin: 0.4rem 0;
+}
+
 .membership-form-wrap {
   margin-top: 2rem;
 }
@@ -587,6 +591,7 @@ p {
 a {
   color: var(--accent);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
