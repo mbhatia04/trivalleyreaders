@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tri-Valley Readers featured events: local author discussions and special book club gatherings in the East Bay.">
+  <title>Featured Events — Tri-Valley Readers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="logo"><a href="index.html"><img src="logo.png" alt="" class="logo-img">Tri-Valley Readers</a></div>
+      <nav>
+        <ul class="nav-tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reading-list.html">Reading List</a></li>
+          <li><a href="featured-events.html" class="active">Featured Events</a></li>
+          <li><a href="membership.html">Membership</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <header class="events-header">
+        <h1>Featured Events</h1>
+        <p class="lead">Special gatherings beyond our monthly book discussions — author visits, local events, and more.</p>
+      </header>
+
+      <div class="events-list">
+        <article class="event-item featured-book">
+          <h2 class="event-title">
+            <span class="event-date">August 2026</span>
+            <span class="event-title-text">Local Author Discussion – <em>Disconnected</em>, Eleanor Vincent</span>
+          </h2>
+          <div class="featured-book-content">
+            <div class="featured-book-cover event-cover">
+              <a href="https://www.goodreads.com/book/show/217264613-disconnected" target="_blank" rel="noopener noreferrer" class="event-cover-link">
+                <img
+                  src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1723046614i/217264613.jpg"
+                  alt="Disconnected: Portrait of a Neurodiverse Marriage cover"
+                >
+              </a>
+            </div>
+            <div class="featured-book-info">
+              <p class="description">
+                Tri-Valley Readers is thrilled to host a discussion with <strong><a href="https://www.eleanorvincent.com/" target="_blank" rel="noopener noreferrer">Eleanor Vincent</a></strong>, a Walnut Creek–based memoirist, in August 2026. Eleanor has generously agreed to meet with our club to talk about her latest book and the story behind it. We hope members and guests will read <em>Disconnected</em> ahead of time so we can make the most of this opportunity to speak with a local author in person.
+              </p>
+              <div class="download-links">
+                <p class="download-label">Get the book:</p>
+                <a href="https://a.co/d/0ivwzoYF" target="_blank" rel="noopener noreferrer" class="download-btn">Purchase on Amazon</a>
+              </div>
+              <div class="member-downloads">
+                <p class="download-label">Member downloads:</p>
+                <p class="member-download-note">Complimentary digital copies for club members. Enter the password shared with you by the club admin.</p>
+                <div id="member-download-gate" class="member-download-gate">
+                  <form id="member-download-form" class="member-download-form">
+                    <div class="member-download-form-row">
+                      <input type="password" id="member-download-password" name="password" placeholder="Member password" autocomplete="current-password" required>
+                      <button type="submit" class="download-btn">Unlock downloads</button>
+                    </div>
+                    <p id="member-download-error" class="member-download-error" hidden>Incorrect password. Please try again or contact the club admin.</p>
+                  </form>
+                </div>
+                <div id="member-download-unlocked" class="member-download-links" hidden>
+                  <div class="download-links">
+                    <a href="Disconnected%20-%20Eleanor%20Vincent.epub" download class="download-btn">EPUB</a>
+                    <a href="Eleanor%20Vincent%20-%20Disconnected.pdf" download class="download-btn">PDF</a>
+                  </div>
+                  <button type="button" id="member-download-lock" class="member-download-lock">Lock downloads</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="meeting-notice events-page-notice">
+        <p>Not a member yet? Visit our <a href="membership.html">membership page</a> to join and receive details about our upcoming events.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Tri-Valley Readers · Est. 2026 · San Ramon, CA</div>
+  </footer>
+
+  <script src="member-downloads.js"></script>
+</body>
+</html>
