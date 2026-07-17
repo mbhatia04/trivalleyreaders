@@ -8,7 +8,7 @@
   --accent: #821b46;
   --accent-light: #ab3063;
   --muted: #7e3c58;
-  --border: #ede1e6;
+  --border: #e4ced7;
   --shadow: rgba(99, 67, 80, 0.5);
   --victorian-pattern: url('victorian-pattern.png');
   /* Recolors the teal source pattern into the site's wine/pink palette */
@@ -532,7 +532,7 @@ button.download-btn:hover {
   font-weight: 600;
 }
 
-.event-item .event-notice {
+.event-notice {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -544,7 +544,7 @@ button.download-btn:hover {
   border: 1px solid var(--border);
 }
 
-.event-item .event-notice-icon {
+.event-notice-icon {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -561,20 +561,20 @@ button.download-btn:hover {
   line-height: 1;
 }
 
-.event-item .event-notice p {
+.event-notice p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--ink);
 }
 
-.event-item .event-notice a {
+.event-notice a {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
 }
 
-.event-item .event-notice a:hover {
+.event-notice a:hover {
   text-decoration: underline;
   color: var(--accent-light);
 }
