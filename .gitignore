@@ -1,0 +1,4 @@
+# Keep local / private assets out of the repo
+victorian-pattern-original.png
+
+.DS_Store
