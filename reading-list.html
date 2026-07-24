@@ -10,8 +10,13 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <div class="logo"><a href="index.html"><img src="logo.png" alt="" class="logo-img">Tri-Valley Readers</a></div>
-      <nav>
+      <div class="header-bar">
+        <div class="logo"><a href="index.html"><img src="logo.png" alt="" class="logo-img">Tri-Valley Readers</a></div>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav id="site-nav">
         <ul class="nav-tabs">
           <li><a href="index.html">Home</a></li>
           <li><a href="reading-list.html" class="active">Reading List</a></li>
@@ -32,6 +37,14 @@
         <button type="button" role="tab" aria-selected="false" data-panel="past">Past Reads</button>
         <button type="button" role="tab" aria-selected="false" data-panel="wishlist">Books We Want to Read</button>
       </div>
+      <label class="reading-select-wrap">
+        <span class="visually-hidden">Choose a reading list section</span>
+        <select class="reading-panel-select" aria-label="Reading list section">
+          <option value="current">Currently Reading</option>
+          <option value="past">Past Reads</option>
+          <option value="wishlist">Books We Want to Read</option>
+        </select>
+      </label>
 
       <div id="current" class="reading-panel active" role="tabpanel">
         <div class="featured-book">
@@ -186,23 +199,35 @@
   </footer>
 
   <script>
+    function showReadingPanel(panelId) {
+      document.querySelectorAll('.reading-tabs button').forEach(function(b) {
+        var isActive = b.getAttribute('data-panel') === panelId;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      document.querySelectorAll('.reading-panel').forEach(function(panel) {
+        var isActive = panel.id === panelId;
+        panel.classList.toggle('active', isActive);
+        panel.hidden = !isActive;
+      });
+      var select = document.querySelector('.reading-panel-select');
+      if (select && select.value !== panelId) {
+        select.value = panelId;
+      }
+    }
+
     document.querySelectorAll('.reading-tabs button').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        var panelId = this.getAttribute('data-panel');
-        document.querySelectorAll('.reading-tabs button').forEach(function(b) {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        document.querySelectorAll('.reading-panel').forEach(function(panel) {
-          panel.classList.remove('active');
-          panel.hidden = true;
-        });
-        this.classList.add('active');
-        this.setAttribute('aria-selected', 'true');
-        document.getElementById(panelId).classList.add('active');
-        document.getElementById(panelId).hidden = false;
+        showReadingPanel(this.getAttribute('data-panel'));
       });
     });
+
+    var readingSelect = document.querySelector('.reading-panel-select');
+    if (readingSelect) {
+      readingSelect.addEventListener('change', function() {
+        showReadingPanel(this.value);
+      });
+    }
 
     document.querySelectorAll('.review-toggle').forEach(function(toggleBtn) {
       toggleBtn.addEventListener('click', function() {
@@ -217,5 +242,6 @@
       });
     });
   </script>
+  <script src="site.js"></script>
 </body>
 </html>
