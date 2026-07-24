@@ -605,6 +605,21 @@ button.download-btn:hover {
   line-height: 1;
 }
 
+.event-notice-icon--instagram {
+  border-radius: 6px;
+}
+
+.event-notice-icon--instagram svg {
+  display: block;
+}
+
+.past-event .featured-book-info .event-notice {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  align-items: center;
+  text-align: left;
+}
+
 .event-notice p {
   margin: 0;
   font-size: 0.95rem;
