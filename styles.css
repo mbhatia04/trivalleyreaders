@@ -744,69 +744,8 @@ button.download-btn:hover {
   width: 155px;
 }
 
-.events-list .member-downloads {
-  margin-top: 1.5rem;
-  padding: 1.25rem 1.5rem;
-  background: var(--cream);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  width: 100%;
-}
-
 .events-page-notice {
   margin-top: 2.5rem;
-}
-
-.member-download-note {
-  font-size: 1rem;
-  color: var(--muted);
-  margin: 0 0 0.75rem 0;
-  line-height: 1.5;
-}
-
-.member-download-form-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.member-download-form input[type="password"] {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  min-width: 12rem;
-  flex: 1;
-  max-width: 280px;
-}
-
-.member-download-error {
-  margin: 0.75rem 0 0;
-  font-size: 0.95rem;
-  color: var(--accent);
-}
-
-.member-download-links .download-links {
-  margin-bottom: 1rem;
-}
-
-.member-download-lock {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  padding: 0.35rem 0.75rem;
-  background: transparent;
-  border: 1px solid var(--muted);
-  color: var(--muted);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.member-download-lock:hover {
-  border-color: var(--accent);
-  color: var(--accent);
 }
 
 .past-book-item {
@@ -1196,14 +1135,5 @@ a:hover {
   .membership-list .membership-content .description {
     display: block;
     line-height: 1.6;
-  }
-
-  .member-download-form-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .member-download-form input[type="password"] {
-    max-width: none;
   }
 }

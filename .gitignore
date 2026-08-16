@@ -2,3 +2,8 @@
 victorian-pattern-original.png
 
 .DS_Store
+
+# Member-only book files and download gate — do not commit
+*.epub
+*.pdf
+member-downloads.js
