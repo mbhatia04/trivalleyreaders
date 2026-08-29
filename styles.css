@@ -1135,9 +1135,15 @@ a:hover {
   }
 
   .past-event-layout--dual-photo .event-photo--compact img {
-    height: auto;
+    display: block;
     width: 100%;
-    max-height: 220px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .past-event-layout--dual-photo .event-photo--wide {
+    max-width: 420px;
   }
 
   .past-event .event-title {
